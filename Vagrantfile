@@ -29,8 +29,8 @@ Vagrant.configure("2") do |config|
         curl -sfL https://get.k3s.io | sh -
 
         # Setup kubeconfig
-        mkdir -p /home/vagrant/.kube
-        cp /etc/rancher/k3s/k3s.yaml /home/vagrant/.kube/config
-        chown -R vagrant:vagrant /home/vagrant/.kube
+        sudo mkdir -p /home/vagrant/.kube
+        sudo cp /etc/rancher/k3s/k3s.yaml /home/vagrant/.kube/config
+        sudo chown -R vagrant:vagrant /home/vagrant/.kube
     SHELL
 end
