@@ -66,6 +66,7 @@ jobs:
         uses: aquasecurity/trivy-action@0.28.0
         with:
           image-ref: ${{ env.DH_IMAGE }}:${{ env.IMAGE_TAG }}
+          platform: linux/arm64
           format: 'table'
           ignore-unfixed: true
           vuln-type: 'os,library'
