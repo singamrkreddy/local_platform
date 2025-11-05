@@ -1,7 +1,15 @@
 name: CI
 on:
   push:
+    branches: [ main ]
+    paths:
+      - 'app/**'           # Only trigger on app code changes
+      - 'Dockerfile'       # Or Dockerfile changes
+      - '.github/workflows/ci.yaml'  # Or CI config changes
   pull_request:
+    paths:
+      - 'app/**'
+      - 'Dockerfile'
   workflow_dispatch:
 
 jobs:
